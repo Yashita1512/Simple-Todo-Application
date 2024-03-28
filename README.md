@@ -15,4 +15,3 @@
 //backend and frontend communication enabler- CORS
 =======
 # Simple-Todo-Application
->>>>>>> f0bf04dba77655d7de3a02147137b055c8c1da16
