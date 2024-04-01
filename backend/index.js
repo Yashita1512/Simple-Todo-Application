@@ -12,10 +12,6 @@ app.use("/todo", todoRouter);
 app.use("/todos", todosRouter);
 app.use("/completed", completedRouter);
 
-app.get("/", (req,res)=>{
-    res.json("Hello, Welcome to the Todo App")
-})
-
 // Dynamically determine the port at runtime
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
