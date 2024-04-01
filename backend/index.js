@@ -8,6 +8,10 @@ app.use(express.json())
 app.use(cors())
 
 //posts a new todo to the server then to the database
+
+app.get("/", (req,res)=>{
+    res.json("Hello, Welcome to the Todo App")
+})
 app.post("/todo", async (req,res)=>{
     const todo = req.body;
     const validTodo = todoCreateSchema.safeParse(todo);
