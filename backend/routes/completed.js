@@ -2,7 +2,7 @@ import express from "express";
 import {todoUpdateSchema} from "../types.js" 
 import {todoModel} from "../db.js"
 
-const completedRouter = express.Router();
+export const completedRouter = express.Router();
 
 //editing a property in the todo object 'isCompleted' to true or false depending on the status of the todo fetched from a button on the frontend and displaying on the frontend
 completedRouter.put("/", async (req,res)=>{
@@ -23,5 +23,3 @@ completedRouter.put("/", async (req,res)=>{
         msg: "Todo Updated"
     })
 })
-
-module.exports = completedRouter;

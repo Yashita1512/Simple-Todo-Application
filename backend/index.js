@@ -1,10 +1,10 @@
 import express from "express";
 import cors from "cors";
-import todoRouter from "./routes/todo.js";
-import todosRouter from "./routes/todos.js";
-import completedRouter from "./routes/completed.js";
+import {todoRouter} from "./routes/todo.js";
+import {todosRouter} from "./routes/todos.js";
+import {completedRouter} from "./routes/completed.js";
 
-const app = express();
+export const app = express();
 app.use(express.json());
 app.use(cors());
 
@@ -18,4 +18,3 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-module.exports = app;

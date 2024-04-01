@@ -1,7 +1,7 @@
 import express from "express";
-import {todoModel} from "./db.js"
+import {todoModel} from "../db.js"
 
-const todosRouter = express.Router();
+export const todosRouter = express.Router();
 
 //gets all todos from the database and displays on the frontend
 todosRouter.get("/", async (req,res)=>{
@@ -9,4 +9,3 @@ todosRouter.get("/", async (req,res)=>{
     res.json({todos})
 })
 
-module.exports = todosRouter;

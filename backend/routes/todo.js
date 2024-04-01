@@ -1,8 +1,8 @@
 import express from "express";
-import {todoCreateSchema, todoUpdateSchema} from "./types.js" 
-import {todoModel} from "./db.js"
+import {todoCreateSchema} from "../types.js" 
+import {todoModel} from "../db.js"
 
-const todoRouter = express.Router();
+export const todoRouter = express.Router();
 
 todoRouter.post("/", async (req,res)=>{
     const todo = req.body;
@@ -21,5 +21,3 @@ todoRouter.post("/", async (req,res)=>{
     })
     res.json({msg:"Todo created"})
 })
-
-module.exports = todoRouter;
