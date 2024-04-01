@@ -6,7 +6,7 @@ function App() {
   const [todos, setTodos] = useState([])
 
   useEffect(()=>{
-    fetch("http://localhost:3000/todos")
+    fetch("https://simple-todo-application-ten.vercel.app/todos")
       .then(async(res)=>{
           const json = await res.json();
           setTodos(json.todos)

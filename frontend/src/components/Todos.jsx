@@ -4,7 +4,7 @@ export function Todos({todos}){
     const [completedTodoIds, setCompletedTodoIds] = useState([])
 
     function markTodoAsComplete(id){
-        fetch("http://localhost:3000/completed",
+        fetch("https://simple-todo-application-ten.vercel.app/completed",
         {
             method:"PUT",
             body:JSON.stringify({

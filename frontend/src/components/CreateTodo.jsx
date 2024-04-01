@@ -15,7 +15,7 @@ export function CreateTodo(props){
             }}></input><br/><br/>
 
         <button onClick={()=>{
-            fetch("http://localhost:3000/todo",
+            fetch("https://simple-todo-application-ten.vercel.app/todo",
                    {
                     method: "POST",
                     body: JSON.stringify({
